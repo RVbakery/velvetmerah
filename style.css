@@ -1,0 +1,396 @@
+/* --- Palet Warna Soft Pastel --- */
+/*
+Soft Cream: #F8F5F1 (Latar Belakang)
+Soft Rose: #F8E8E6 (Header, Section Background)
+Deep Muted Rose: #A36A7D (Logo, Teks Kontras)
+Light Muted Pink: #C89FAD (Tombol CTA, Hover)
+Soft Dark Gray: #7B7B7B (Teks Paragraf)
+*/
+
+/* =================================
+   1. GLOBAL & TYPOGRAPHY
+   ================================= */
+   body {
+    font-family: 'Georgia', serif; /* Font klasik dan lembut */
+    margin: 0;
+    padding: 0;
+    background-color: #F8F5F1; /* Soft Cream/Off-White */
+    color: #5C5C5C; /* Darker soft gray for main text */
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    color: #A36A7D; /* Deep Muted Rose */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =================================
+   2. HEADER & NAVIGATION
+   ================================= */
+.header {
+    background-color: #F8E8E6; /* Soft Rose/Pink Pastel */
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Bayangan lembut */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #A36A7D; /* Deep Muted Rose */
+    letter-spacing: 1px;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin-left: 35px;
+}
+
+.nav-menu a {
+    color: #7B7B7B; /* Soft dark gray */
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-size: 0.95em;
+    letter-spacing: 1px;
+}
+
+.nav-menu a:hover {
+    color: #C89FAD; /* Light Muted Pink for hover effect */
+}
+
+.cart-icon {
+    font-size: 1.5em;
+    color: #A36A7D;
+    cursor: pointer;
+}
+
+/* =================================
+   3. HERO & PRODUCT GRID (Home Page Content)
+   ================================= */
+
+/* --- Hero Section --- */
+.hero-section {
+    padding: 50px 0;
+    background-color: #FEFAF6; /* Latar belakang hero yang sangat lembut */
+    text-align: center;
+}
+
+.hero-image-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(163, 106, 125, 0.75); /* Deep Muted Rose semi-transparan */
+    padding: 20px 40px;
+    font-size: 2.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* --- Product Grid --- */
+.product-grid {
+    display: flex;
+    justify-content: center;
+    padding: 40px 50px;
+    gap: 30px;
+    flex-wrap: wrap; /* Memastikan responsif pada layar kecil */
+}
+
+.product-item {
+    position: relative;
+    overflow: hidden;
+    width: 30%; /* Mengatur lebar agar 3 item muat */
+    min-width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white;
+}
+
+.product-item img {
+    width: 100%;
+    height: 300px; /* Tinggi seragam untuk gambar produk */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover img {
+    transform: scale(1.05);
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Overlay semi-transparan */
+    color: #A36A7D;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.05em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-item:hover .overlay-text {
+    opacity: 1;
+}
+
+/* --- CTA Button --- */
+.cta-button-container {
+    text-align: center;
+    padding: 20px 0 50px 0;
+}
+
+.cta-button {
+    background-color: #C89FAD; /* Light Muted Pink Pastel */
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #A36A7D; /* Warna lebih gelap saat hover */
+    transform: translateY(-2px);
+}
+
+/* =================================
+   4. NEW SECTIONS STYLING (Menu, About, Contact)
+   ================================= */
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    padding-top: 20px;
+    border-bottom: 2px solid #F8E8E6; /* Garis bawah lembut */
+    display: inline-block;
+}
+
+/* --- Menu/Catalog Section Styling --- */
+.menu-catalog-section {
+    background-color: #FEFAF6;
+    text-align: center;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tata letak responsif */
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.menu-item-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.menu-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.menu-item-info {
+    padding: 15px;
+}
+
+.menu-item-info h4 {
+    color: #A36A7D;
+    font-size: 1.3em;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.menu-item-info p {
+    color: #7B7B7B;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.menu-item-info .price {
+    font-weight: bold;
+    color: #C89FAD;
+    font-size: 1.1em;
+}
+
+
+/* --- About Us Section Styling --- */
+.about-section {
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+}
+
+.about-text h3 {
+    text-align: left;
+    color: #A36A7D;
+    font-size: 1.8em;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Contact Section Styling --- */
+.contact-section {
+    background-color: #F8E8E6; /* Soft Rose Background */
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.contact-item {
+    text-align: center;
+    width: 30%;
+}
+
+.contact-item h3 {
+    color: #A36A7D;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    margin: 5px 0;
+    color: #5C5C5C;
+}
+
+/* =================================
+   5. FOOTER
+   ================================= */
+.footer {
+    background-color: #A36A7D; /* Deep Muted Rose */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+/* --- Responsiveness (Basic) --- */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .nav-menu ul {
+        display: none; /* Sembunyikan menu di mobile, perlu JS untuk toggle */
+    }
+
+    .product-grid {
+        padding: 20px;
+    }
+    
+    .product-item {
+        width: 100%; /* Satu item per baris di mobile */
+    }
+
+    .hero-text {
+        font-size: 1.5em;
+        padding: 10px 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image {
+        max-width: 100%;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-item {
+        width: 80%;
+    }
+}
